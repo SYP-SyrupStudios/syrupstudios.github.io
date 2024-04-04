@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="/ast.syrupstudios.net/Logo.svg">
+    <link rel="stylesheet" href="styles.css">
+    <title>Syrup Studios</title>
+</head>
+<body>
+    <div id="preloader">
+        <div class="loading-screen">
+            <div class="loading-bar"></div>
+        </div>
+    </div>
+    <header>
+        <div class="logo">Syrup Studios</div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li>
+                    <a href="#" class="active">Home</a>
+                </li>
+                <li>
+                    <a href="#about">About</a>
+                </li>
+                <li>
+                    <a onclick="redirect()">Contact</a>
+                </li>
+                <li>
+                    <a href="#games">Games</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <canvas id="background"></canvas>
+        <section class="section">
+            <div class="slider" id="#home">
+                <div class="slide">
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+
+                    <div class="st first">
+                        <img src="https://via.placeholder.com/900x500" alt="placeholder">
+                    </div>
+                    <div class="st">
+                        <img src="https://via.placeholder.com/900x500" alt="placeholder">
+                    </div>
+                    <div class="st">
+                        <img src="https://via.placeholder.com/900x500" alt="placeholder">
+                    </div>
+
+                    <div class="nav-auto">
+                        <div class="a-b1"></div>
+                        <div class="a-b2"></div>
+                        <div class="a-b3"></div>
+                    </div>
+                </div>
+
+                <div class="nav-m">
+                    <label for="radio1" class="m-btn"></label>
+                    <label for="radio2" class="m-btn"></label>
+                    <label for="radio3" class="m-btn"></label>
+                </div>
+            </div>
+        </section>
+        <section class="games" id="games">
+            <div class="wave"></div>
+            <div class="title">Games!</div>
+            <div class="container">
+                <div class="card">
+                    <img src="https://via.placeholder.com/200x300" alt="placeholder">
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/200x300" alt="placeholder">
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/200x300" alt="placeholder">
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/200x300" alt="placeholder">
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/200x300" alt="placeholder">
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/200x300" alt="placeholder">
+                </div>
+            </div>
+        </section>
+        <section class="about" id="about">
+            <div class="title">About Us!</div>
+            <div class="text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, ratione! <br>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur? <br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, quisquam. <br>
+                Lorem ipsum dolor sit amet consectetur adipisicing.
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="social_icon">
+            <li><a href="https://www.facebook.com/" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="https://www.twitter.com/" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a></li>
+            <li><a href="https://www.github.com/" target="_blank"><ion-icon name="logo-github"></ion-icon></a></li>
+            <li><a href="https://www.instagram.com/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
+        </ul>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a onclick="redirect()">Contact</a></li>
+            <li><a href="#games">Games</a></li>
+            <li><a onclick="redirect()">Feedback</a></li>
+        </ul>
+        <p>&copy;2024 SYP | All Rights Reserved</p>
+    </footer>
+    <script>
+        const preloader = document.getElementById("preloader");
+
+        function loadData() {
+            window.addEventListener("load", async function(){
+                document.body.classList.add('prevent-scrolling');    
+                await sleep(3);
+                document.body.classList.remove('prevent-scrolling');
+                preloader.style.display = "none"
+            });
+        }
+
+        async function sleep(seconds) {
+            return new Promise(resolve=>setTimeout(resolve, seconds*1000));
+        }
+
+        loadData();
+    </script>
+    <script>
+        async function redirect() {
+            preloader.style.display = "flex"
+            document.body.classList.add('prevent-scrolling'); 
+            await sleep(5);
+            location.reload()
+        }
+    </script>
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

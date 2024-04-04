@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="/ast.syrupstudios.net/logo.svg">
+    <title>Page Unavailable</title>
+    <style>
+        @font-face {font-family: Baloo; src: url(/ast.syrupstudios.net/baloo-font.ttf);}
+        html,  body {background: #1d1f21; margin: 0; padding: 0; user-select: none; overflow-x: hidden;}
+        .text{font-family: Baloo; color: white; font-size: 17px; position: absolute; top: 76%; left: 50%; transform: translate(-50%, -50%);}
+        .Pagetitle {font-family: Baloo; color: white; font-size: 22px;}
+        .pageTitleCentre {position: absolute; text-align: center; top: 36%; left: 50%; transform: translate(-50%, -50%);}
+        .ErrorTitle {font-family: Baloo; color: white; font-size: 40px; font-weight: bolder;}
+        .errorTitleCentre {position: absolute; top: 25%; left: 50%; transform: translate(-50%, -50%);}
+        .line {width: 30%; height: 3px; background: white; position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%);}
+        .lineLow {top: 42%;}
+        .curve {position: absolute; height: 100px; width: 100%; top: 0; background-color: #313438;}
+        .curve::before {content: ''; display: block; position: absolute; border-radius: 100% 50%; width: 55%; height: 100%; background-color: #1d1f21; transform: translate(85%, 60%);}
+        .curve::after {content: ''; display: block; position: absolute; border-radius: 100% 50%; width: 55%; height: 100%; background-color: #313438; transform: translate(-4%, 40%); z-index: -1;} 
+        .bubble::after {content: ''; border-top-left-radius: 50% 100%; border-top-right-radius: 50% 100%; position: absolute; bottom: 0; height: 10%; width: 100%; background-color: #313438; z-index: -1;}
+        .btn {width: 300px; height: 50px; font-size: 20px; color: white; border: 2px solid white; border-radius: 15px; background: transparent; position: absolute; top: 67%; left: 50%; transform: translate(-50%, -50%);}
+        .btn:hover, .btn:focus {width: 300px; height: 50px; font-size: 20px; color: black; border: 2px solid white; border-radius: 15px; background: white; cursor: pointer;}
+        .statusbtn {color: white; border: none; font-size: 19px; font-weight: bolder; text-decoration: underline; background: transparent;}
+        .statusbtn:hover, .statusbtn:focus {background: #313438; cursor: pointer;}
+        #preloader {background: #1d1f21; height: 100vh; width: 100%; position: fixed; z-index: 6;}
+    </style>
+</head>
+<body>
+    <div id="preloader"></div>
+    <main>
+        <div class="curve"></div>
+        <div class="Content">
+            <div class="ErrorTitle errorTitleCentre">Error 404</div>
+            <div class="line"></div>
+            <div class="Pagetitle pageTitleCentre">Page is unavailable or has been deleted.</div>
+            <div class="line lineLow"></div>
+            <button class="btn" id="homeBtn">Go to homepage</button>
+            <div class="text">or check our <button class="statusbtn" id="statusBtn">status</button> page.</div>
+        </div>
+        <div class="bubble"></div>
+    </main>
+    <script>
+        const preloader = document.getElementById("preloader");
+
+        function loadData() {
+            window.addEventListener("load", async function(){
+            await sleep(1);
+            preloader.style.display = "none"
+            });
+        }
+
+        async function sleep(seconds) {
+            return new Promise(resolve=>setTimeout(resolve, seconds*1000));
+        }
+
+        loadData();
+
+        var redirectButton = document.getElementById('homeBtn');
+
+        redirectButton.addEventListener('click', function() {
+            window.location.href = 'https://syrup-studios-networks.on.drv.tw/web/index/';
+        });
+
+        var statusButton = document.getElementById('statusBtn');
+
+        statusButton.addEventListener('click', function() {
+            window.location.href = 'https://syrup-studios-networks.on.drv.tw/web/index/';
+        });
+    </script>
+</body>
+</html>

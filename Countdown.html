@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="/ast.syrupstudios.net/logo.svg">
+    <title>Syrup Studios</title>
+    <style>
+        @font-face {font-family: Baloo; src: url(/ast.syrupstudios.net/baloo-font.ttf);}
+        html,  body {background: #1d1f21; margin: 0; padding: 0; user-select: none; overflow-x: hidden;}
+        .Pagetitle {font-family: Baloo; color: white; font-size: 22px;}
+        .pageTitleCentre {position: absolute; text-align: center; top: 46.5%; left: 50%; transform: translate(-50%, -50%);}
+        .ErrorTitle {font-family: Baloo; color: white; font-size: 40px; font-weight: bolder;}
+        .errorTitleCentre {position: absolute; top: 36%; left: 50%; transform: translate(-50%, -50%);}
+        .line {width: 30%; height: 3px; background: white; position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%);}
+        .lineLow {top: 53%;}
+        .curve {position: absolute; height: 100px; width: 100%; top: 0; background-color: #313438;}
+        .curve::before {content: ''; display: block; position: absolute; border-radius: 100% 50%; width: 55%; height: 100%; background-color: #1d1f21; transform: translate(85%, 60%);}
+        .curve::after {content: ''; display: block; position: absolute; border-radius: 100% 50%; width: 55%; height: 100%; background-color: #313438; transform: translate(-4%, 40%); z-index: -1;} 
+        .bubble::after {content: ''; border-top-left-radius: 50% 100%; border-top-right-radius: 50% 100%; position: absolute; bottom: 0; height: 10%; width: 100%; background-color: #313438; z-index: -1;}
+        #preloader {background: #1d1f21; height: 100vh; width: 100%; position: fixed; z-index: 6;}
+    </style>
+</head>
+<body>
+    <main>
+        <div class="curve"></div>
+        <div class="Content">
+            <div class="ErrorTitle errorTitleCentre">New Website Release!</div>
+            <div class="line"></div>
+            <div class="Pagetitle pageTitleCentre" id="countdown">0d 0h 0m 0s</div>
+            <div class="line lineLow"></div>
+        </div>
+        <div class="bubble"></div>
+    </main>
+    <script>
+        // Set the target date and time (1 April 2024, 11:45 AM BST)
+        var targetDate = new Date('April 15, 2024 16:15:00 GMT+0100');
+
+        // Function to update the countdown
+        function updateCountdown() {
+            const now = new Date(); // Current date and time
+            const timeDiff = targetDate - now; // Difference between target and current date/time
+
+            // Check if the target date/time has passed
+            if (timeDiff <= 0) {
+                document.getElementById('countdown').innerHTML = 'waiting on update...';
+                setTimeout(() => {
+                    location.reload();
+                }, 5000); // 5000 milliseconds = 5 seconds
+            } else {
+                // Calculate remaining time
+                const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+                // Display the countdown
+                document.getElementById('countdown').innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            }
+        }
+
+        // Update the countdown every second
+        setInterval(updateCountdown, 1000);
+
+        // Initial call to update the countdown immediately
+        updateCountdown();
+    </script>
+</body>
+</html>

@@ -2,18 +2,8 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
 import { getDatabase, ref, onValue, set, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
 
-require('dotenv').config()
+import firebaseConfig from './config';
 
-const firebaseConfig = {
-  apiKey: process.env.API_KEY,
-  authDomain: "syrup-studios-api.firebaseapp.com",
-  databaseURL: "https://syrup-studios-api-default-rtdb.firebaseio.com",
-  projectId: "syrup-studios-api",
-  storageBucket: "syrup-studios-api.appspot.com",
-  messagingSenderId: "100691275577",
-  appId: "1:100691275577:web:76799b531c3d16c5b4c2e8"
-};
-  
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 

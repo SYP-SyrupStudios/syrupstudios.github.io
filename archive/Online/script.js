@@ -3,7 +3,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebas
 import { getDatabase, ref, onValue, set, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
 
 const firebaseConfig = {
-  apiKey: process.env.secrets.API_KEY,
+  apiKey: ${ API_KEY },
   authDomain: "syrup-studios-api.firebaseapp.com",
   databaseURL: "https://syrup-studios-api-default-rtdb.firebaseio.com",
   projectId: "syrup-studios-api",

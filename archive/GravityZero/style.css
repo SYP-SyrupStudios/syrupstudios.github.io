@@ -1,0 +1,83 @@
+/* LABEL */
+.copy-text {
+  color: black;
+  font-family: Baloo;
+  font-size: 15px;
+  position: absolute;
+  font-weight: bolder;
+  bottom: 0;
+  margin-left: 10px;
+}
+
+.version-text {
+  color: black;
+  font-family: Baloo;
+  font-size: 15px;
+  position: absolute;
+  font-weight: bolder;
+  bottom: 0;
+  right: 0;
+  margin-right: 10px;
+}
+
+.WARNING {
+  color: red;
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* STYLES */
+
+@font-face {
+  font-family: Baloo;
+  src: url(Fonts/Baloo-Font.ttf);
+}
+
+html {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(45deg, rgb(0, 122, 200), white, white, rgb(0, 122, 200));
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  overflow: hidden;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: Baloo;
+}
+
+.fullScreen {
+  color: white;
+  width: 95px;
+  height: 35px;
+  border: none;
+  border-radius: 10px;
+  background: rgb(0, 122, 200);
+  font-family: Baloo;
+  font-size: 15px;
+  position: absolute;
+  font-weight: bolder;
+  margin: 10px;
+}
+
+#Frame {
+  width: 485px;
+  height: 402px;
+  border: 3px solid black;
+  border-radius: 10px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

@@ -1,0 +1,86 @@
+@font-face {
+    font-family: Baloo;
+    src: url(Baloo-Font.ttf);
+}
+
+* {
+    font-family: Baloo;
+}
+
+body {
+    background-color: lightgray;
+}
+
+.title-text {
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.center-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid black;
+    border-radius: 40px;
+    width: 400px;
+    text-align: center;
+    padding-bottom: 20px;
+    background-color: white;
+}
+
+.text-feild {
+    padding: 10px 30px;
+    width: 60%;
+    margin: 20px 0;
+    border-radius: 10px;
+    border: 2px solid black;
+    font-size: 10pt;
+}
+
+.btn-style {
+    padding: 10px 45px;
+    border: 2px solid lightseagreen;
+    border-radius: 10px;
+    background-color: lightseagreen;
+    color: white;
+}
+
+.an-btn {
+    margin-top: 10px;
+    margin-left: 10px;
+    border: 0;
+    background-color: transparent;
+    font-size: 12pt;
+    text-decoration: underline;
+}
+
+.btn-style:hover {
+    background-color: rgb(25, 149, 143);
+    border: 2px solid rgb(25, 149, 143);
+    transition: 0.5s;
+}
+
+#register-div {
+    display: none;
+}
+
+#reset-div {
+    display: none;
+}
+
+#result-box {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16pt;
+}
+
+.error-text {
+    color: red;
+    font-size: 20px;
+    margin-bottom: 0;
+}

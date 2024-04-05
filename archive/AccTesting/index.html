@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Account testing</title>
+  </head>
+  <body>
+    <div class="center-box" id="login-div">
+      <h2 class="title-text">Login</h2>
+      <div class="error-text" id="error-login"></div>
+      <input
+        type="email"
+        class="text-feild"
+        id="login-email"
+        name="login-email"
+        placeholder="Email"
+        required
+      /><br />
+      <input
+        type="password"
+        class="text-feild"
+        id="login-password"
+        name="login-password"
+        placeholder="Password"
+        required
+      />
+      <br />
+      <button id="login-btn" class="btn-style">Login</button><br />
+      <button id="reg-btn" class="an-btn">
+        Don't have an account? sign&nbsp;up
+      </button>
+      <button id="reset-btn" class="an-btn">
+        Forgotten Password?
+      </button>
+    </div>
+    <div class="center-box" id="register-div">
+      <h2 class="title-text">Sign up</h2>
+      <div class="error-text" id="error-signup"></div>
+      <input
+        type="email"
+        class="text-feild"
+        id="register-email"
+        name="register-email"
+        placeholder="Email"
+        required
+      /><br />
+      <input
+        type="password"
+        class="text-feild"
+        id="register-password"
+        name="register-password"
+        placeholder="Password"
+        required
+      />
+      <br />
+      <button id="register-btn" class="btn-style">Sign&nbsp;up</button><br />
+      <button id="log-btn" class="an-btn">Have an account? Login</button>
+    </div>
+    <div class="center-box" id="reset-div">
+      <h2 class="title-text">Reset Password</h2>
+      <div class="error-text" id="error-reset"></div>
+      <input
+        type="email"
+        class="text-feild"
+        id="reset-password"
+        name="reset-password"
+        placeholder="Email"
+        required
+      /><br />
+      <br />
+      <button id="reset-pass-btn" class="btn-style">Reset</button><br />
+    </div>
+    <div id="result-box">
+      <h3 id="result"></h3>
+      <br />
+      <button id="log-out-btn" class="btn-style">Log out</button>
+    </div>
+    <script type="module" src="https://syrupstudios.github.io/ast.syrupstudios.github.io/API/sypAPI_google.firebase9.15.0.js"></script>
+    <script type="module" src="script-accounts.js"></script>
+  </body>
+</html>

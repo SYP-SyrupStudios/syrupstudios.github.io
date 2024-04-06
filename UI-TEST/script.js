@@ -1,6 +1,6 @@
 // Load the external JavaScript file dynamically
 const script = document.createElement('script');
-script.src = 'https://syrup-studios-networks.on.drv.tw/web/assets/API/UIBuilder.js';
+script.src = 'https://syrupstudios.github.io/ast.syrupstudios.github.io/API/UIBuilder.js';
 script.onload = function() {
     // Now that the external script is loaded, you can use the createElement function here
     createElement('div', {

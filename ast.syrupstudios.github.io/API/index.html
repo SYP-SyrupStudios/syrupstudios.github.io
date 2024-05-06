@@ -31,16 +31,8 @@
   <div class="copyright">&copy; SYP 2024</div>
 
   <script>
-  // Check if the browser prefers a dark theme
-  const darkThemeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-  const isDarkTheme = darkThemeMediaQuery.matches;
-
-  // Define colors based on the theme
-  const textColor = isDarkTheme ? 'white' : 'black';
-
-  // Log the message with colors based on the theme
   console.log(`%cWARNING`, `color: red; font-weight: bold; font-size: 50px;`);
-  console.log(`%cThe browser console is a developer tool not intended for use by users. DO NOT copy and paste any code in this window. Any code execution in this window is a violation and will be reported to the owners of this site.`, `color: ${textColor}; font-weight: bold; font-size: 15px;`);
+  console.log(`%cThe browser console is a developer tool not intended for use by users. DO NOT copy and paste any code in this window. Any code execution in this window is a violation and will be reported to the owners of this site.`, `color: white; font-weight: bold; font-size: 15px;`);
   </script>
 </body>
 </html>

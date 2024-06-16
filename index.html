@@ -10,7 +10,7 @@
         html,  body {background: #1d1f21; margin: 0; padding: 0; user-select: none; overflow-x: hidden;}
         .Pagetitle {font-family: Baloo; color: white; font-size: 22px;}
         .pageTitleCentre {position: absolute; text-align: center; top: 46.5%; left: 50%; transform: translate(-50%, -50%);}
-        .ErrorTitle {font-family: Baloo; color: white; font-size: 40px; font-weight: bolder;}
+        .ErrorTitle {font-family: Baloo; color: white; font-size: 25px; font-weight: bolder;}
         .errorTitleCentre {position: absolute; top: 36%; left: 50%; transform: translate(-50%, -50%);}
         .line {width: 30%; height: 3px; background: white; position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%);}
         .lineLow {top: 53%;}
@@ -33,7 +33,7 @@
         <div class="bubble"></div>
     </main>
     <script>
-        // Set the target date and time (1 April 2024, 11:45 AM BST)
+        /*// Set the target date and time (1 April 2024, 11:45 AM BST)
         var targetDate = new Date('June 20, 2024 16:15:00 GMT+0100');
 
         // Function to update the countdown
@@ -63,7 +63,8 @@
         setInterval(updateCountdown, 1000);
 
         // Initial call to update the countdown immediately
-        updateCountdown();
+        updateCountdown(); */
+        document.getElementById('countdown').innerHTML = 'Update Cancled! Please check back soon.'
     </script>
     <script>
       console.log(`%cWARNING`, `color: red; font-weight: bold; font-size: 50px;`);
